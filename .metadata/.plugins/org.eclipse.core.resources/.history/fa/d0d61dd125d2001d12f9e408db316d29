@@ -1,0 +1,19 @@
+package kodlama.io.rentACar.business.abstracts;
+
+import java.util.List;
+
+import kodlama.io.rentACar.business.requests.DeleteFrameworkRequest;
+import kodlama.io.rentACar.business.requests.UpdateFrameworkRequest;
+import kodlama.io.rentACar.business.requests.Frameworks.CreateFrameworkRequest;
+import kodlama.io.rentACar.business.responses.GetAllFrameworkResponse;
+
+public interface FrameworkServices {
+	List<GetAllFrameworkResponse> getAll();
+
+	void add(CreateFrameworkRequest createFrameworkRequest);
+
+	void update(UpdateFrameworkRequest updateFrameworkRequest);
+
+	void delete(DeleteFrameworkRequest deleteFrameworkRequest);
+
+}

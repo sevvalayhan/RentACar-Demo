@@ -1,0 +1,49 @@
+package kodlama.io.rentACar.business.concretes;
+
+import java.util.List;
+
+import kodlama.io.rentACar.business.abstracts.FrameworkServices;
+import kodlama.io.rentACar.business.requests.Frameworks.CreateFrameworkRequest;
+import kodlama.io.rentACar.business.requests.Frameworks.DeleteFrameworkRequest;
+import kodlama.io.rentACar.business.requests.Frameworks.UpdateFrameworkRequest;
+import kodlama.io.rentACar.business.responses.GetAllFrameworkResponse;
+import kodlama.io.rentACar.dataAccess.abstracts.FrameworkRepository;
+import kodlama.io.rentACar.entities.consretes.Framework;
+
+public class FrameworkManager implements FrameworkServices{
+	
+	FrameworkRepository frameworkRepository;
+	
+	
+	
+	
+	public FrameworkManager(FrameworkRepository frameworkRepository) {
+		this.frameworkRepository = frameworkRepository;
+	}
+
+	@Override
+	public List<GetAllFrameworkResponse> getAll() {
+		return null;
+	}
+
+	@Override
+	public void add(CreateFrameworkRequest request) {
+		Framework framework = new Framework();
+		framework.setName(request.getName());
+		this.frameworkRepository.save(framework);
+		
+	}
+
+	@Override
+	public void update(UpdateFrameworkRequest request) {
+
+		
+		
+	}
+
+	@Override
+	public void delete(DeleteFrameworkRequest request){
+		
+	}
+
+}
